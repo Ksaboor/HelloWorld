@@ -3,11 +3,15 @@ package main
 import "fmt"
 
 const helloPrefix = "Hello, "
-func Hello(name string) string{
+
+func Hello(name string) string {
+	if name == "" {
+		name = "World!"
+	}
 	return helloPrefix + name
 
 }
 
-func main()  {
+func main() {
 	fmt.Println(Hello("world"))
-} 
+}
